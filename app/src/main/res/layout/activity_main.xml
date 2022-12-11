@@ -5,6 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
+    <data>
+        <variable
+            name="myName"
+            type="com.conrradocamacho.aboutme.MyName" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +23,7 @@
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/name"
+            android:text="@={myName.name}"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +59,7 @@
             android:layout_height="wrap_content"
             android:background="@color/green"
             android:paddingBottom="@dimen/small_padding"
-            android:text=""
+            android:text="@={myName.nickname}"
             android:textAlignment="center"
             android:visibility="gone" />
 
